@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Busca de Hotéis</title>
+</head>
+<body>
+    <h1>Buscar Hotéis</h1>
+    <form method="get">
+        <input type="text" name="q" placeholder="Digite o nome do hotel" value="{{ request.GET.q }}">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <ul>
+        {% for hotel in hoteis %}
+            <li>
+                <h2>{{ hotel.nome }}</h2>
+                <p>Localização: {{ hotel.localizacao }}</p>
+                <p>Preço da diária: R$ {{ hotel.preco_diaria }}</p>
+                <p>{{ hotel.descricao }}</p>
+            </li>
+        {% empty %}
+            <li>Nenhum hotel encontrado.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

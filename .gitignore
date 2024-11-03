@@ -1,0 +1,14 @@
+# Arquivos de cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Ambientes virtuais
+venv/
+env/
+
+# Configurações do editor de texto
+.vscode/
+.idea/
+*.swp
