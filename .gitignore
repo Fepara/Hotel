@@ -12,3 +12,12 @@ env/
 .vscode/
 .idea/
 *.swp
+
+
+# Banco de dados SQLite
+db.sqlite3
+
+
+
+# Logs
+*.log
